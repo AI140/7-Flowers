@@ -13,10 +13,17 @@ public:
     static cocos2d::Scene* createScene();
 
     virtual bool init();
-   bool onTouchBegan(Touch *touch, Event *unused_event);
+    bool onTouchBegan(Touch *touch, Event *unused_event);
+    void ShowScore(int scoreNum);
+    void update(float dt);
+
+    CREATE_FUNC(variableScene);
+
 
 private:
-    bool start= false;
+    int now= 0;
+    int score=0;
+
 };
 
 
