@@ -25,7 +25,7 @@
 
 cmake_minimum_required(VERSION 3.6)
 
-set(APP_NAME mytest)
+set(APP_NAME test)
 
 project(${APP_NAME})
 
@@ -51,15 +51,37 @@ list(APPEND GAME_SOURCE
      Classes/AppDelegate.cpp
      Classes/HelloWorldScene.cpp
      Classes/variableScene.cpp
-     Classes/snowScene.cpp
+     Classes/variableScene2.cpp
+     Classes/popScene.cpp
+     Classes/progressBar.cpp
+     Classes/storyScene.cpp
+     Classes/PlayVideoScene.cpp
      Classes/grammarScene.cpp
+     Classes/grammarScene2.cpp
+     Classes/grammarScene3.cpp
+     Classes/grammarScene4.cpp
+     Classes/IfPopScene.cpp
+     Classes/FuncPopScene.cpp
+     Classes/ForPopScene.cpp
+     Classes/snowScene.cpp
      )
 list(APPEND GAME_HEADER
      Classes/AppDelegate.h
      Classes/HelloWorldScene.h
      Classes/variableScene.h
-     Classes/snowScene.h
+     Classes/variableScene2.h
+     Classes/popScene.h
+     Classes/progressBar.h
+     Classes/storyScene.h
+     Classes/PlayVideoScene.h
      Classes/grammarScene.h
+     Classes/grammarScene2.h
+     Classes/grammarScene3.h
+     Classes/grammarScene4.h
+     Classes/IfPopScene.h
+     Classes/FuncPopScene.h
+     Classes/ForPopScene.h
+     Classes/snowScene.h
      )
 
 if(ANDROID)
