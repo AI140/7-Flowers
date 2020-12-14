@@ -26,7 +26,18 @@
 #define __HELLOWORLD_SCENE_H__
 
 #include "cocos2d.h"
+#include "SimpleAudioEngine.h"
+#include "ui/CocosGUI.h"
+#include "variableScene.h"
+#include "variableScene2.h"
+#include "PlayVideoScene.h"
+#include "snowScene.h"
+#include "grammarScene.h"
+#include "popScene.h"
 
+class variableScene2;
+class PlayVideoScene;
+class variableScene;
 class HelloWorld : public cocos2d::Scene
 {
 public:
@@ -36,11 +47,15 @@ public:
     
     // a selector callback
     void beginGame1Callback(cocos2d::Ref* pSender);
+    void videoToCallback(cocos2d::Ref* pSender);
     void beginGame2Callback(cocos2d::Ref* pSender);
     void beginGame3Callback(cocos2d::Ref* pSender);
+    void soundCallback(cocos2d::Ref* pSender);
     
     // implement the "static create()" method manually
     CREATE_FUNC(HelloWorld);
+private:
+    bool sound=true;
 };
 
 #endif // __HELLOWORLD_SCENE_H__

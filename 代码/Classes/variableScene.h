@@ -15,7 +15,10 @@ public:
     virtual bool init();
     bool onTouchBegan(Touch *touch, Event *unused_event);
     void ShowScore(int scoreNum);
+    void backToCallback(cocos2d::Ref* pSender);
     void update(float dt);
+
+    void lockCallback(Ref* pSender);
 
     CREATE_FUNC(variableScene);
 
@@ -23,6 +26,13 @@ public:
 private:
     int now= 0;
     int score=0;
+
+    int start=0;
+    int finish=0;
+
+    int touchTime=1;   //点击次数
+
+    int lock=0;
 
 };
 

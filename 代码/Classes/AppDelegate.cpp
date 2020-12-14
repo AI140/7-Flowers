@@ -1,9 +1,7 @@
-
+#include <SimpleAudioEngine.h>
 #include "AppDelegate.h"
-#include "HelloWorldScene.h"
-#include "variableScene.h"
-#include "snowScene.h"
-#include "grammarScene.h"
+# include "progressBar.h"
+#include "variableScene2.h"
 
 // #define USE_AUDIO_ENGINE 1
 // #define USE_SIMPLE_AUDIO_ENGINE 1
@@ -58,6 +56,17 @@ static int register_all_packages()
 }
 
 bool AppDelegate::applicationDidFinishLaunching() {
+    // initialize audio
+    auto AUDIO = CocosDenshion::SimpleAudioEngine::getInstance();
+    CocosDenshion::SimpleAudioEngine::getInstance()->preloadBackgroundMusic("music/backgroundBgm.mp3");
+    CocosDenshion::SimpleAudioEngine::getInstance()->preloadBackgroundMusic("music/story.mp3");
+    CocosDenshion::SimpleAudioEngine::getInstance()->preloadEffect("music/pop.wav");
+    CocosDenshion::SimpleAudioEngine::getInstance()->preloadEffect("music/right.mp3");
+    CocosDenshion::SimpleAudioEngine::getInstance()->preloadEffect("music/wrong.wav");
+    CocosDenshion::SimpleAudioEngine::getInstance()->preloadEffect("music/victory.ogg");
+    CocosDenshion::SimpleAudioEngine::getInstance()->preloadEffect("music/type.wav");
+
+
     // initialize director
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();
@@ -98,7 +107,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
     register_all_packages();
 
     // create a scene. it's an autorelease object
-    auto scene = HelloWorld::createScene();
+    auto scene = progressBar::createScene();
+    //auto scene = variableScene2::createScene();
 
     // run
     director->runWithScene(scene);
@@ -109,6 +119,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 // This function will be called when the app is inactive. Note, when receiving a phone call it is invoked.
 void AppDelegate::applicationDidEnterBackground() {
     Director::getInstance()->stopAnimation();
+
 
 #if USE_AUDIO_ENGINE
     AudioEngine::pauseAll();
@@ -128,4 +139,5 @@ void AppDelegate::applicationWillEnterForeground() {
     SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
     SimpleAudioEngine::getInstance()->resumeAllEffects();
 #endif
+
 }
