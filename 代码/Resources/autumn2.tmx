@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="8" height="8" tilewidth="64" tileheight="64" infinite="0" nextlayerid="2" nextobjectid="1">
+ <tileset firstgid="1" source="秋天07(Fall_爱给网_aigei_com.tsx"/>
+ <tileset firstgid="257" source="秋天06(Fall_爱给网_aigei_com.tsx"/>
+ <tileset firstgid="513" source="秋天04.tsx"/>
+ <tileset firstgid="769" source="秋天08(Fall_爱给网_aigei_com.tsx"/>
+ <layer id="1" name="图块层 1" width="8" height="8">
+  <data encoding="csv">
+317,318,793,794,863,24,25,135,
+333,334,809,810,2684354910,300,301,38,
+2684354715,350,3758096523,861,840,104,350,54,
+297,391,2147484317,1610613594,1610613578,620,621,862,
+884,885,1073741960,137,2684354685,636,637,862,
+900,901,1610612791,1610612791,862,862,669,862,
+916,917,3221226377,55,135,862,573,862,
+932,933,2147483727,55,1610612791,588,589,590
+</data>
+ </layer>
+</map>
